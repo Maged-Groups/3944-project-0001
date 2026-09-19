@@ -11,3 +11,21 @@ git config user.email "youremail"
 git config --global user.name "Your Name"
 git config --global user.email "youremail"
 ```
+
+## Add file to stage
+
+```bash
+git add .
+```
+
+## Commit changes
+
+```bash
+git commit -m "Your Message"
+# OR
+git commit -m "Your Message Header
+
+Message Body
+
+Message Footer"
+```
