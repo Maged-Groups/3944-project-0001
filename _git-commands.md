@@ -35,3 +35,19 @@ Message Body
 
 Message Footer"
 ```
+
+## link local repo to GitHub repo
+
+```bash
+git remote add origin REPO_URL
+```
+
+## Upload your commits "Changes"
+
+```bash
+# First time
+git push -u origin main
+
+# Everytime
+git push
+```
