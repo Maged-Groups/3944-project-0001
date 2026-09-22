@@ -1,7 +1,7 @@
-First Line.
+<?php
 
-Second Line
+echo 5 + 4;
 
-Third Line.
+echo 3000;
 
-Fifth lines
+echo 'Maged Yaseen';

@@ -12,6 +12,12 @@ git config --global user.name "Your Name"
 git config --global user.email "youremail"
 ```
 
+## Initialize a new reposotory
+
+```bash
+git init
+```
+
 ## Add file to stage
 
 ```bash
