@@ -51,3 +51,9 @@ git push -u origin main
 # Everytime
 git push
 ```
+
+## Change the remote origin
+
+```bash
+git remote set-url origin REPO_URL
+```
