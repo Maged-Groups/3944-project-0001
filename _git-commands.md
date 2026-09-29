@@ -57,3 +57,16 @@ git push
 ```bash
 git remote set-url origin REPO_URL
 ```
+
+## Clone reposotory into my local machine
+
+```bash
+# GIT will create a folder with the same name of the repo
+git clone REPO_URL
+
+# I need to create a folder with a choosen name
+git clone REPO_URL FOLDER_NAME
+
+# I need to download the repo inside the current folder
+git clone REPO_URL .
+```
