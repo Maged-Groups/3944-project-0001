@@ -322,3 +322,9 @@ echo getOrderMessage("shipped") . "<br>";
 echo getOrderMessage("delivered") . "<br>";
 echo getOrderMessage("cancelled") . "<br>";
 echo getOrderMessage("returned") . "<br>";
+
+echo"<h2>Mixed Challenges</h2>";
+echo"<b>Challenge 16 cann't ,want understand how i do function? <br></b>";
+
+echo "<b>Challenge 17 cann't ,want understand how i do function?<br></b>";
+
