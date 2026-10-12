@@ -49,3 +49,4 @@
     echo"<br>⟡ (calculateArea) that takes length and width and returns the area of a rectangle. <br>";
     $calculateArea=fn(int $length,int $width) => $length * $width;
     echo $calculateArea(5, 10);
+    
