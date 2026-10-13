@@ -107,3 +107,9 @@ for($i = 0; $i < count($numbers); $i++) {
 $average = $sum / count($numbers);
 echo "The average is: $average <br>";
 //////////////////////////////////////////////////
+function createUser(string $name, $role = "user", $active = true)  {
+    echo "Name: $name <br>";
+    echo "Role: $role <br>";
+    echo "Active: " . ($active ? "true" : "false") . "<br>";
+}
+createUser(name: "Youssef");
