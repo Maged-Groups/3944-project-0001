@@ -14,7 +14,7 @@ Create a PHP script that uses a `for` loop to calculate and print the sum of the
 
 ## Challenge 4: Print Even Numbers with a `while` Loop
 
-Create a PHP script that uses a `while` loop to print all even numbers from `2` to `30`.
+Create a PHP script that uses a `while` loop to print all even numbers from `1` to `30`.
 
 ## Challenge 5: Count in Steps with a `while` Loop
 
