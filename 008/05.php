@@ -5,15 +5,15 @@ declare(strict_types=1);
 // Array loop
 
 
-$cars = [
-    0 => 'Ferrari',
-    1 => 'Jaguar',
-    2 => 'BMW'
-];
+// $cars = [
+//     0 => 'Ferrari',
+//     1 => 'Jaguar',
+//     2 => 'BMW'
+// ];
 
-foreach ( $cars as $key => $value  ){
-    var_dump($key, $value);
-}
+// foreach ( $cars as $key => $value  ){
+//     var_dump($key, $value);
+// }
 
 
 $products = [
@@ -26,6 +26,8 @@ $products = [
 foreach ( $products as $key => $value  ){
     var_dump($key, $value);
 }
+
+var_dump($products);
 
 
 $users = [
