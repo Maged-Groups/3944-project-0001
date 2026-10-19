@@ -209,7 +209,7 @@ $total = array_reduce($order,fn($carry, $item) => $carry + ($item["price"] * $it
 );
 echo "Total Order Value: " . $total;
 
-echo "<h3>Challenge 27 </h3>";
+echo "<h3>Challenge 28 </h3>";
 $classroomA = ["Ahmed", "Mona", "Omar", "Sara"];
 $classroomB = ["Mona", "Ali", "Sara", "Nour"];
 print_r(array_diff($classroomA, $classroomB));
@@ -231,3 +231,26 @@ print_r(array_diff($c, $classroomA));
 echo "<br>";
 //Counts the total number of entries in the combined array.
 print_r(count(array_diff($c, $classroomB)));
+echo "<br>";
+
+echo "<h3>Challenge 29 </h3>";
+$products = [
+    ["name" => "Laptop", "quantity" => 10],
+    ["name" => "Mouse", "quantity" => 0],
+    ["name" => "Keyboard", "quantity" => 3],
+    ["name" => "Monitor", "quantity" => 7],
+    ["name" => "Printer", "quantity" => 2]
+];
+print_r(array_filter($products, fn($product) => $product["quantity"] > 0));
+echo "<br>";
+print_r(array_any($products, fn($product) => $product["quantity"] < 5));// when the result is 1 meaning true in array_any
+echo "<br>";
+$quantities = array_column($products, "quantity"); // extract quantities from array
+print_r($quantities);
+echo "<br>";
+$total =array_sum($quantities);    
+echo "Calculates the total quantity of all products: $total";
+echo "<br>";
+print_r(array_first($products));
+echo "<br>";
+print_r(array_last($products));
