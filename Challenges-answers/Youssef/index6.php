@@ -1,6 +1,5 @@
 <?php 
 declare(strict_types=1);
-$total=0;
 echo "<h3>Challenge 1</h3>";
 //Create a PHP script that checks whether at least one student's score in the following array fails in the exam. A student passes if their score is 50 or above.
 $scores = [55, 42, 67, 80, 30];
@@ -155,5 +154,80 @@ echo "<h3>Challenge 23</h3>";
 $scores = [70, 85, 90, 65, 55, 78, 88, 92, 60, 73];
 print_r(array_chunk($scores,4));
 
+echo "<h3>Challenge 24</h3>";
+$names = ["Ahmed", "Mona", "Omar", "Sara", "Ali"];
+$ages = [17, 24, 19, 16, 30];
+$c=(array_combine($names, $ages));
+print_r($c);
+$f=(array_filter($c,fn($age)=>$age<18));
+print_r($f);
+print_r(count($f));
+print_r(array_first($f));
 
+echo "<h3>Challenge 25</h3>";
+$products = ["Laptop", "Mouse", "Keyboard", "Monitor"];
+$sales = [1200, 250, 450, 700];
+print_r(array_combine($products, $sales));
+print_r(array_sum($sales));
+echo "<br>";
+print_r(array_any($sales,fn($sale)=>$sale>500));
+sort($sales);
+echo "<br>";
+echo "Sorts the sales amounts in ascending order :" . implode("-", $sales);
+echo "<br>";
+print_r(count($sales));
 
+echo "<h3>Challenge 26</h3>";
+$participants = [
+    "Ahmed",
+    "Mona",
+    "Omar",
+    "Sara",
+    "Ali",
+    "Nour",
+    "Hassan"
+    ];
+$random=(array_rand($participants,3));
+print_r($random);
+echo "<br>";
+foreach ($random as $key) {
+    echo $participants[$key] . "<br>";
+}
+echo "<br>";
+print_r(count($participants));
+echo "<br>";
+print_r(count($random));
+
+echo "<h3>Challenge 27 </h3>";//want more explain.
+echo "<b>more important</b><br>";
+$order = [
+    ["price" => 100, "quantity" => 2],
+    ["price" => 250, "quantity" => 3],
+    ["price" => 50, "quantity" => 4]
+];
+$total = array_reduce($order,fn($carry, $item) => $carry + ($item["price"] * $item["quantity"]),0
+);
+echo "Total Order Value: " . $total;
+
+echo "<h3>Challenge 27 </h3>";
+$classroomA = ["Ahmed", "Mona", "Omar", "Sara"];
+$classroomB = ["Mona", "Ali", "Sara", "Nour"];
+print_r(array_diff($classroomA, $classroomB));
+echo "<br>";
+print_r(array_diff($classroomB, $classroomA));
+echo "<br>";
+$c=(array_combine($classroomA, $classroomB));
+print_r($c);
+echo "<br>";
+// Merge both classrooms in one array meaning new array = array 1 + array 2
+$c = array_merge($classroomA, $classroomB);
+print_r($c);
+echo "<br>";
+// Remove duplicate students
+$result = array_values(array_unique($c));
+print_r($result);
+//
+print_r(array_diff($c, $classroomA));
+echo "<br>";
+//Counts the total number of entries in the combined array.
+print_r(count(array_diff($c, $classroomB)));
