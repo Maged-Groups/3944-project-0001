@@ -82,3 +82,63 @@ $products = [
 echo "<pre>";
 var_dump(\arr::groupProducts($products));
 echo "</pre>";
+
+echo"<h3>Challenge 16: Compare Two Stores</h3>";
+$store1 = ["Laptop", "Mouse", "Keyboard", "Monitor"];
+$store2 = ["Mouse", "Printer", "Monitor"];
+echo"<pre>";
+var_dump(\arr::uniqueProducts($store1, $store2));
+echo"<pre>";
+
+echo"<h3>Challenge 17: Merge and Format Shopping Carts</h3>";
+$cart1 = ["laptop", "wireless mouse"];
+$cart2 = ["mechanical keyboard", "usb cable"];
+echo"<pre>";
+var_dump(\arr::mergeCarts($cart1, $cart2));
+echo"<pre>";
+//this difficult
+echo"<h3>Challenge 18: Select Random Winners</h3>";
+$participants = ["ahmed", "mona", "omar", "sara", "ali"];
+$P=\arr::randomWinners($participants,2);
+print_r($P);
+echo"<br>";
+print_r(count($P));
+echo"<br>";
+
+echo"<h3>Challenge 19: Calculate an Order Total</h3>";
+$order = [
+    ["price" => 100, "quantity" => 2],
+    ["price" => 250, "quantity" => 3],
+    ["price" => 50, "quantity" => 4]
+    ];
+    print_r(\arr::orderTotal($order));
+    
+echo"<h3>Challenge 20: Filter Adult Users</h3>";
+$users = [
+    ["name" => "ahmed ali", "age" => 17],
+    ["name" => "mONA hassan", "age" => 24],
+    ["name" => "omar adel", "age" => 19],
+    ["name" => "sara mohamed", "age" => 16]
+];
+print_r(\arr::adultUsers($users));
+
+//important for me 
+echo"<h3>Challenge 21: Find the First Affordable Product</h3>";
+$products = [
+    ["name" => "laptop", "price" => 1500],
+    ["name" => "mouse", "price" => 80],
+    ["name" => "keyboard", "price" => 120],
+    ["name" => "usb cable", "price" => 50]
+    ];
+    print_r(\arr::firstAffordableProduct($products,2000));
+    
+echo"<h3>Challenge 22: Generate an Inventory Report</h3>";
+$products = [
+    ["name" => "laptop", "quantity" => 10],
+    ["name" => "mouse", "quantity" => 0],
+    ["name" => "keyboard", "quantity" => 3],
+    ["name" => "monitor", "quantity" => 7],
+    ["name" => "printer", "quantity" => 2]
+];
+
+print_r(\arr::inventoryReport($products));
