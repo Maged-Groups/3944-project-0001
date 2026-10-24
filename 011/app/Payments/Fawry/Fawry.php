@@ -41,4 +41,8 @@ class Fawry
 
         self::$commission = $newCommission;
     }
+
+    static function report () {
+        echo '<br>-------------------- Fawry Report --------------------<br>';
+    }
 }

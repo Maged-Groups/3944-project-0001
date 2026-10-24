@@ -15,6 +15,19 @@ class Payment extends Fawry
 
         echo "Payment -> Fawry -> Payment -> process with amount of $gross<br>";
 
-        self::generateInvoice($gross);
+        // Ways to access parent method
+        // self::generateInvoice($gross);
+        // Payment::generateInvoice($gross);
+        // static::generateInvoice($gross);
+
+        // Fawry::generateInvoice($gross);
+        parent::generateInvoice($gross);
+
+        parent::report();
+    }
+
+    static function report()
+    {
+        echo '<h3>-------------------- Payment Report --------------------</h3>';
     }
 }
