@@ -4,6 +4,7 @@ require_once 'challenge-1/helpers/dump.php';
 
 require_once 'challenge-1/Restaurant/Restaurant.php';
 require_once 'challenge-1/Restaurant/FoodMenu.php';
+require_once 'challenge-1/Restaurant/Order.php';
 echo Restaurant::showRestaurantInfo();
 echo '<br>------------------<br>';
 echo Restaurant:: getSecretCode();
@@ -20,3 +21,5 @@ echo FoodMenu:: getFoodPrice();
 echo '<br>------------------<br>';
 FoodMenu:: setFoodPrice(300);
 echo FoodMenu:: getFoodPrice();
+echo '<br>------------------<br>';
+echo Order:: calculateTotal();
