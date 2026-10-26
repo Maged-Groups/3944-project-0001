@@ -7,7 +7,25 @@ require_once 'challenge-1/Restaurant/FoodMenu.php';
 require_once 'challenge-1/Restaurant/Order.php';
 echo Restaurant::showRestaurantInfo();
 echo '<br>------------------<br>';
+echo Restaurant:: RESTAURANT_NAME;
+echo '<br>------------------<br>';
+echo Restaurant:: CURRENCY;
+echo '<br>------------------<br>';
+echo FoodMenu:: getPreparationCost();
+echo '<br>------------------<br>';
+ FoodMenu:: setPreparationCost(70);
+echo FoodMenu:: getPreparationCost();
+echo '<br>------------------<br>';
+echo FoodMenu:: MENU_VERSION;
+echo '<br>------------------<br>';
+echo FoodMenu::showFoodInfo();
+echo '<br>------------------<br>';
+
+echo '<br>------------------<br>';
+
 echo Restaurant:: getSecretCode();
+echo '<br>------------------<br>';
+ 
 echo '<br>------------------<br>';
 
 Restaurant:: setSecretCode('gfgfhftdrrrrrrrrrr');
