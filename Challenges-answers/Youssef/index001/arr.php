@@ -4,7 +4,7 @@ class Arr
 {
     public static function hasFailingScore(array $score): bool
     {
-        return array_any($score, fn($score) => $score >= 50 ? true : false);
+        return array_any($score, static fn($score) => $score < 50);
     }
     //this way important favorite
     public static function hasFailingScoree(array $score): bool
@@ -62,7 +62,7 @@ class Arr
     }
     public static function adultUsers(array $users)
     {
-        $users = array_filter($users, static fn($user) => !\Num::isAdult($user['age']));
+        $users = array_filter($users, static fn($user) => \Num::isAdult($user['age']));
         return array_map(static fn($user) => \Str::title($user['name']), $users);
     }
 
@@ -79,18 +79,19 @@ class Arr
         $product['name'] = \Str::title($product['name']);
         return $product;
     }
-    public static function inventoryReport(array $product){
-        $f=array_filter($product,static fn($item)=>$item['quantity']>0);
+    public static function inventoryReport(array $product)
+    {
+        $f = array_filter($product, static fn($item) => $item['quantity'] > 0);
         print_r($f);
-        $a=array_any($product,static fn($item)=>$item['quantity']<5);
+        $a = array_any($product, static fn($item) => $item['quantity'] < 5);
         echo "<pre>";
         print_r($a);
         echo "<pre>";
-        $c=array_column($f,"quantity");
+        $c = array_column($f, "quantity");
         print_r($c);
         /*$total = array_sum(array_column($f, 'quantity'));
         print_r($total);*/
-        $total2=array_sum($c);
+        $total2 = array_sum($c);
         print_r($total2);
         $f = \Str::title(array_first(array_column($product, "name")));
         echo "<pre>";
@@ -100,8 +101,30 @@ class Arr
         echo "<pre>";
         print_r($l);
         echo "<pre>";
-        
-        
     }
 
+    public static function compareClassrooms(array $class1, array $class2): void
+    {
+        $a = array_diff($class1, $class2);
+        print_r($a);
+        $b = array_diff($class2, $class1);
+        print_r($b);
+        $m = array_merge($class1, $class2);
+        print_r($m);
+        $c = count($m);
+        echo "<pre>";
+        print_r($c);
+        echo "<pre>";
+        $map = array_map("\Str::title", $m);
+        echo "<pre>";
+        print_r($map);
+        echo "<pre>";
+        }
+        public static function salesReport(array $pro,array $sale){
+            $map=array_map("\Str::title",$pro);
+            print_r($map);
+            $s=array_sum($sale);
+            print_r($s);
+
+    }
 }

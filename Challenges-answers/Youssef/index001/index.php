@@ -139,6 +139,18 @@ $products = [
     ["name" => "keyboard", "quantity" => 3],
     ["name" => "monitor", "quantity" => 7],
     ["name" => "printer", "quantity" => 2]
-];
-
+    ];
+    
 print_r(\arr::inventoryReport($products));
+
+echo"<h3>Challenge 23: Compare Two Classrooms</h3>";
+$classroomA = ["ahmed", "mona", "omar", "sara"];
+$classroomB = ["mona", "ali", "sara", "nour"];
+
+print_r(\arr::compareClassrooms($classroomA,$classroomB));
+
+echo"<h3>Challenge 24: Create a Sales Summary</h3>";
+$products = ["laptop", "mouse", "keyboard", "monitor"];
+$sales = [1200, 250, 450, 700];
+
+print_r(\arr::salesReport($products,$sales));
