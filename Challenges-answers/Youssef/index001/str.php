@@ -26,4 +26,7 @@ class Str{
         $words = array_map(fn($word) => strtoupper($word[0]), $words);
         return implode(".",$words);
     }
+     public static function title(string $str): string {
+        return ucwords(strtolower($str));
+    }
 }
