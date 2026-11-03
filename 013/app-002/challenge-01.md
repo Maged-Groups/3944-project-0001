@@ -109,11 +109,11 @@ Display the following information about the entire company:
 
 Create the following three store objects:
 
-| Branch | City | Initial Stock |
-|---|---|---:|
-| Cairo Branch | Cairo | 100 |
-| Alexandria Branch | Alexandria | 150 |
-| Giza Branch | Giza | 200 |
+| Branch            | City       | Initial Stock |
+| ----------------- | ---------- | ------------: |
+| Cairo Branch      | Cairo      |           100 |
+| Alexandria Branch | Alexandria |           150 |
+| Giza Branch       | Giza       |           200 |
 
 Call the `create()` method for each object.
 
@@ -124,15 +124,18 @@ Call the `create()` method for each object.
 Perform the following operations:
 
 ### Cairo Branch
+
 - Sell 20 products.
 - Sell 10 more products.
 - Refund 5 products.
 
 ### Alexandria Branch
+
 - Sell 30 products.
 - Refund 10 products.
 
 ### Giza Branch
+
 - Sell 50 products.
 - Sell 25 more products.
 - Refund 15 products.
