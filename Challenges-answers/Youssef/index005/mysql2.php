@@ -92,12 +92,12 @@ SELECT * from orderdetails;
 SELECT orderNumber ,sum(quantityOrdered*priceEach) totalQuantity_Price FROM orderdetails GROUP BY orderNumber WITH ROLLUP;
 DESCRIBE orderdetails;*/
 
-SELECT * FROM customers;
+/*SELECT * FROM customers;
 SELECT customerNumber, customerName, creditLimit, 'Platinum' Loyality FROM customers WHERE creditLimit > 200000
 UNION
 SELECT customerNumber, customerName, creditLimit, 'Gold' FROM customers WHERE creditLimit BETWEEN 100000 AND 200000
 UNION
 SELECT customerNumber, customerName, creditLimit, 'silver' FROM customers WHERE creditLimit BETWEEN 50000 AND 100000
 UNION
-SELECT customerNumber, customerName, creditLimit, 'Platinum' Loyality FROM customers WHERE creditLimit < 50000;
+SELECT customerNumber, customerName, creditLimit, 'Platinum' Loyality FROM customers WHERE creditLimit < 50000;*/
 
