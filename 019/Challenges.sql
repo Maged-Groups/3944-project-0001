@@ -43,13 +43,6 @@
 -- Hint: IN, Subquery, orderdetails.
 
 
--- Challenge 7: Products Above Their Product Line Average
--- Display products whose buyPrice is higher than
--- the average buyPrice of products in the same productLine.
--- Display: productCode, productName, productLine, buyPrice.
--- Hint: Correlated Subquery.
-
-
 -- ==========================================
 -- Derived Table Challenges
 -- ==========================================
